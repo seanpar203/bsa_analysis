@@ -60,7 +60,3 @@ conn.close()
 db.dispose()
 
 print(result)
-
-
-
-
