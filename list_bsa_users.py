@@ -1,13 +1,18 @@
 
 # coding: utf-8
 
-# # *List of users.* 
+"""  List of users.
 
-# #### Imports.
+Notes:
+	This script shows the steps taken to access
+	a remote AWS EC2 instance Postgres database
+	and run a simple query to get all users.
+"""
 
+# Imports
 import os
 
-# Database(SQL) Modules.
+# Database(SQL) Modules
 from sqlalchemy import(
     Table,
     select,
@@ -16,7 +21,7 @@ from sqlalchemy import(
 ) 
 
 
-# #### DB Access Connection
+# DB Access Connection
 
 # Build up path from private variables.
 DB_CRED = os.environ['DB_CRED']
@@ -29,9 +34,9 @@ db = create_engine(DB_FULL)
 metadata = MetaData()
 
 
-# #### List & Reflect tables.
-print(db.table_names())
+# List & Reflect tables
 
+# ['account', 'game', 'coord']
 
 # Start table variables with capitals to prevent overwrite. 
 Game = Table('game', metadata, autoload=True, autoload_with=db)
@@ -39,23 +44,31 @@ Coord = Table('coord', metadata, autoload=True, autoload_with=db)
 Account = Table('account', metadata, autoload=True, autoload_with=db)
 
 
-# #### Show table information
+# Table information
 
-print('Game Columns   : {columns}'.format(columns=Game.columns))
-print('Coord Columns  : {columns}'.format(columns=Coord.columns))
-print('Account Columns: {columns}'.format(columns=Account.columns))
+""" 
+- Game Columns   : ['game.id', 'game.won', 'game.account_id']
+- Coord Columns  : ['coord.id', 'coord.cpu_coords', 'coord.acc_coords', 'coord.game_id']
+- Account Columns: ['account.id', 'account.user_name']
+"""
 
 
-# #### Show a list of all users.
+# Show a list of all users
 
-# Create temp connection.
+""" Raw SQL Query.
+
+SELECT account.user_name 
+from account; 
+"""
+
+# Create tmp connection.
 conn = db.connect()
 
 # Get user names.
 stmt = select([Account.columns.user_name])
 result = db.execute(stmt).fetchall()
 
-# Close & remove connection.
+# Close & remove connection
 conn.close()
 db.dispose()
 
