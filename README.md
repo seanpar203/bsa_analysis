@@ -12,7 +12,7 @@ Solidfying and honing my skills with `pandas`, `SQLalchemy` and for the pure enj
 turning it into something beautiful.
 
 
-# Histogram of total games player by all users.
+# Total games played by all users.
 This graph shows that most users who played the battleship app normally play between 1-10 times before
 not playing anymore. There a couple of edge cases but for the most part that's what the average player
 will do.
