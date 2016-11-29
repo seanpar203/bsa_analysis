@@ -31,5 +31,6 @@ breakdown.
 
 ![](user_wins_bar.png)
 
-
 ![](user_wins_joint.png)
+
+![](user_wins_lr.png)
