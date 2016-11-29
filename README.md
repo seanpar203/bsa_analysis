@@ -18,3 +18,10 @@ not playing anymore. There a couple of edge cases but for the most part that's w
 will do.
 
 ![](hist_games_played.png)
+
+
+# Bargraph of player wins and total games.
+This graph shows the wins and the total amount won. It's clear that the CPU is hard and has a high
+winning percentage. 
+
+![](user_wins.png)
