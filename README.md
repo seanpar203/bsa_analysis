@@ -20,8 +20,16 @@ will do.
 ![](hist_games_played.png)
 
 
-# Bargraph of player wins and total games.
-This graph shows the wins and the total amount won. It's clear that the CPU is hard and has a high
-winning percentage. 
+# Player wins and total games.
+These graphs repsent the total games played and the total games won. The bar provides a simplier look
+but the scatter plot provides much more insightful information by further showing the correlation of
+total games played and total wins.
 
-![](user_wins.png)
+The CPU is hard to beat, The highest win percentage is around 33%. I also didn't add a column on the `game`
+table to verify the user actually completed the game, that would've helped get a more accurate CPU vs User
+breakdown.
+
+![](user_wins_bar.png)
+
+
+![](user_wins_joint.png)
