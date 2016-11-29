@@ -136,3 +136,8 @@ sns_plot = sns.jointplot(x='Played', y='Won', data=df)
 sns.plt.show()
 
 sns_plot.savefig('user_wins_joint.png', dpi=350)
+
+
+# Save Linear Regression Jointplot.
+sns_plot = sns.jointplot(x='Played', y='Won', data=df, kind='reg')
+sns_plot.savefig('user_wins_lr.png', dpi=350)
