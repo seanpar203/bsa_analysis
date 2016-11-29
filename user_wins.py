@@ -72,6 +72,14 @@ Account_game = join(
 # Create temp connection.
 conn = db.connect()
 
+""" Raw SQL Query """
+# SELECT account.user_name as "User", 
+# SUM(CASE WHEN game.won = 't' THEN 1 ELSE 0 END) as "Won",
+# SUM(CASE WHEN game.won = 'f' THEN 1 ELSE 0 END) as "Lost" 
+# FROM account
+#   INNER JOIN game on account.id = game.account_id
+#   GROUP BY account.user_name;
+
 # Get user names.
 stmt = select([
         Account_un, 
