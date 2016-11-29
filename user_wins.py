@@ -129,3 +129,10 @@ ax.set_title('Wins And Games Played Per Person.')
 sns.despine(left=True, bottom=True)
 
 fig.savefig('user_wins.png', dpi=200)
+
+
+# Create Jointplot.
+sns_plot = sns.jointplot(x='Played', y='Won', data=df)
+sns.plt.show()
+
+sns_plot.savefig('user_wins_joint.png', dpi=350)
