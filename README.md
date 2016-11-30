@@ -40,3 +40,7 @@ This graph was created using `plotly` and `cufflinks` and it shows that at each 
 `Lost` `Wins` and `Played` the same user was at the top.
 
 ![](user_wins_line.png)
+
+
+Here is a box plot which really shows how large the outlier in the data set it.
+![](user_wins_box.png)
