@@ -34,3 +34,9 @@ breakdown.
 ![](user_wins_joint.png)
 
 ![](user_wins_lr.png)
+
+# Player wins interactive line graph.
+This graph was created using `plotly` and `cufflinks` and it shows that at each of the highest points,
+`Lost` `Wins` and `Played` the same user was at the top.
+
+![](user_wins_line.png)
